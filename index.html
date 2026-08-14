@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IDYLLIC Sales – Elevate Your Lifestyle</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <div class="announcement-bar" id="announcementBar">
+    <div class="announcement-track">
+      <span>Free Shipping Worldwide on Orders Above Ksh 75,000</span>
+      <span>Flash Sale – Up to 50% Off Electronics</span>
+      <span>New Arrivals Every Week – Shop Now</span>
+      <span>Secure Payments · Easy Returns · 24/7 Support</span>
+      <span>Free Shipping Worldwide on Orders Above Ksh 75,000</span>
+      <span>Flash Sale – Up to 50% Off Electronics</span>
+    </div>
+    <button class="announcement-close" onclick="document.getElementById('announcementBar').style.display='none'">✕</button>
+  </div>
+
+  <header class="navbar" id="navbar">
+    <div class="navbar-inner container">
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+     <a href="#" class="logo">
+  <img src="/home/noxulx/Desktop/E-Commerce/logo.jpg" alt="IDYLLIC Logo" class="logo-icon">
+  <span>IDYLLIC</span>
+</a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#" class="nav-item has-mega">Shop <i class="fa fa-chevron-down"></i>
+          <div class="mega-menu">
+            <div class="mega-col">
+              <h4>Fashion</h4>
+              <a href="#">Men's Clothing</a>
+              <a href="#">Women's Clothing</a>
+              <a href="#">Accessories</a>
+              <a href="#">Footwear</a>
+              <a href="#">Bags & Wallets</a>
+            </div>
+            <div class="mega-col">
+              <h4>Electronics</h4>
+              <a href="#">Smartphones</a>
+              <a href="#">Laptops</a>
+              <a href="#">Headphones</a>
+              <a href="#">Tablets</a>
+              <a href="#">Smart Watches</a>
+            </div>
+            <div class="mega-col">
+              <h4>Home & Living</h4>
+              <a href="#">Furniture</a>
+              <a href="#">Décor</a>
+              <a href="#">Kitchen</a>
+              <a href="#">Lighting</a>
+              <a href="#">Bedding</a>
+            </div>
+            <div class="mega-col mega-promo">
+              <div class="mega-promo-card">
+                <p class="promo-tag">Flash Deal</p>
+                <p class="promo-title">Up to 50% OFF</p>
+                <p class="promo-sub">Electronics this week</p>
+                <a href="#" class="btn-promo">Shop Now →</a>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="#">Fashion</a>
+        <a href="#">Electronics</a>
+        <a href="#">Home</a>
+        <a href="#">Blog</a>
+        <a href="#">About</a>
+      </nav>
+      <div class="nav-actions">
+        <div class="search-wrapper">
+          <input type="text" class="search-input" id="searchInput" placeholder="Search products..." />
+          <button class="search-btn" id="searchBtn"><i class="fa fa-search"></i></button>
+          <div class="search-dropdown" id="searchDropdown"></div>
+        </div>
+        <button class="icon-btn" title="Wishlist"><i class="fa fa-heart"></i><span class="badge" id="wishlistBadge">0</span></button>
+        <button class="icon-btn" title="Account"><i class="fa fa-user"></i></button>
+        <button class="icon-btn cart-btn" id="cartToggle" title="Cart">
+          <i class="fa fa-shopping-bag"></i>
+          <span class="badge" id="cartBadge">0</span>
+        </button>
+        <button class="dark-toggle" id="darkToggle" title="Toggle dark mode">
+          <i class="fa fa-moon" id="darkIcon"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>Your Cart <span id="cartCount">(0)</span></h3>
+      <button class="cart-close" id="cartClose"><i class="fa fa-times"></i></button>
+    </div>
+    <div class="cart-body" id="cartBody">
+      <div class="cart-empty" id="cartEmpty">
+        <i class="fa fa-shopping-bag"></i>
+        <p>Your cart is empty</p>
+        <a href="#" class="btn-primary">Start Shopping</a>
+      </div>
+    </div>
+    <div class="cart-footer" id="cartFooter" style="display:none;">
+      <div class="cart-total">
+        <span>Subtotal</span>
+        <strong id="cartTotal">Ksh 0.00</strong>
+      </div>
+      <p class="cart-shipping">Free shipping on orders over Ksh 75,000</p>
+      <button class="btn-primary full-width">Proceed to Checkout</button>
+      <button class="btn-outline full-width">Continue Shopping</button>
+    </div>
+  </aside>
+
+  <section class="hero" id="hero">
+    <div class="hero-slides">
+      <div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1400&q=80')">
+        <div class="hero-content container">
+          <span class="hero-tag">New Collection 2025</span>
+          <h1 class="hero-title">Elevate Your<br /><em>Lifestyle</em></h1>
+          <p class="hero-sub">Discover premium fashion, cutting-edge electronics,<br />and stunning home goods. Free shipping on orders over Ksh 7,500.</p>
+          <div class="hero-btns">
+            <a href="#featured" class="btn-primary">Shop Now <i class="fa fa-arrow-right"></i></a>
+            <a href="#categories" class="btn-ghost">Explore Collections</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=1400&q=80')">
+        <div class="hero-content container">
+          <span class="hero-tag">Electronics Sale</span>
+          <h1 class="hero-title">Stay Ahead<br /><em>With Gadgets</em></h1>
+          <p class="hero-sub">Discover the newest gadgets and innovative gizmos<br />that keep you ahead of the curve.</p>
+          <div class="hero-btns">
+            <a href="#featured" class="btn-primary">Buy Now <i class="fa fa-arrow-right"></i></a>
+            <a href="#deals" class="btn-ghost">View Deals</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1400&q=80')">
+        <div class="hero-content container">
+          <span class="hero-tag">Home & Living</span>
+          <h1 class="hero-title">Design Your<br /><em>Dream Space</em></h1>
+          <p class="hero-sub">Curated furniture and décor to transform<br />every corner of your home.</p>
+          <div class="hero-btns">
+            <a href="#featured" class="btn-primary">Shop Home <i class="fa fa-arrow-right"></i></a>
+            <a href="#categories" class="btn-ghost">All Categories</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-controls">
+      <button class="hero-dot active" data-slide="0"></button>
+      <button class="hero-dot" data-slide="1"></button>
+      <button class="hero-dot" data-slide="2"></button>
+    </div>
+    <button class="hero-arrow hero-prev"><i class="fa fa-chevron-left"></i></button>
+    <button class="hero-arrow hero-next"><i class="fa fa-chevron-right"></i></button>
+  </section>
+
+  <section class="trust-bar">
+    <div class="container trust-grid">
+      <div class="trust-item">
+        <i class="fa fa-truck"></i>
+        <div>
+          <strong>Free Shipping</strong>
+          <p>On orders over Ksh 7,500</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <i class="fa fa-shield-alt"></i>
+        <div>
+          <strong>Secure Payment</strong>
+          <p>100% secure transactions</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <i class="fa fa-undo"></i>
+        <div>
+          <strong>Easy Returns</strong>
+          <p>30-day return policy</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <i class="fa fa-headset"></i>
+        <div>
+          <strong>24/7 Support</strong>
+          <p>Dedicated customer service</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES SECTION -->
+  <section class="categories-section section" id="categories">
+    <div class="container">
+      <div class="section-header">
+        <h2>Shop by Category</h2>
+        <p>Explore our curated collections</p>
+      </div>
+      <div class="categories-grid">
+        <div class="category-card" data-aos>
+          <img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=600&q=80" alt="Fashion" />
+          <div class="category-info">
+            <h3>Fashion</h3>
+            <p>1,243 products</p>
+            <a href="#" class="cat-link">Shop Now →</a>
+          </div>
+        </div>
+        <div class="category-card" data-aos>
+          <img src="https://images.unsplash.com/photo-1498049794561-7780e7231661?w=600&q=80" alt="Electronics" />
+          <div class="category-info">
+            <h3>Electronics</h3>
+            <p>876 products</p>
+            <a href="#" class="cat-link">Shop Now →</a>
+          </div>
+        </div>
+        <div class="category-card" data-aos>
+          <img src="https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?w=600&q=80" alt="Home & Living" />
+          <div class="category-info">
+            <h3>Home & Living</h3>
+            <p>2,156 products</p>
+            <a href="#" class="cat-link">Shop Now →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mini-cats">
+        <div class="mini-cat"><i class="fa fa-headphones"></i><span>Earbuds</span><small>4 items</small></div>
+        <div class="mini-cat"><i class="fa fa-keyboard"></i><span>Keyboards</span><small>8 items</small></div>
+        <div class="mini-cat"><i class="fa fa-mobile-alt"></i><span>Mobile</span><small>6 items</small></div>
+        <div class="mini-cat"><i class="fa fa-print"></i><span>Printers</span><small>3 items</small></div>
+        <div class="mini-cat"><i class="fa fa-laptop"></i><span>Laptops</span><small>5 items</small></div>
+        <div class="mini-cat"><i class="fa fa-tablet-alt"></i><span>Tablets</span><small>5 items</small></div>
+        <div class="mini-cat"><i class="fa fa-watch"></i><span>Watches</span><small>9 items</small></div>
+        <div class="mini-cat"><i class="fa fa-camera"></i><span>Cameras</span><small>7 items</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="deals-section section" id="deals">
+    <div class="container">
+      <div class="deals-header">
+        <div>
+          <h2>Deal of the Day</h2>
+          <p>Unbelievable savings await!</p>
+        </div>
+        <div class="countdown" id="countdown">
+          <div class="countdown-block"><span id="cd-days">00</span><small>Days</small></div>
+          <div class="countdown-sep">:</div>
+          <div class="countdown-block"><span id="cd-hours">00</span><small>Hours</small></div>
+          <div class="countdown-sep">:</div>
+          <div class="countdown-block"><span id="cd-mins">00</span><small>Mins</small></div>
+          <div class="countdown-sep">:</div>
+          <div class="countdown-block"><span id="cd-secs">00</span><small>Secs</small></div>
+        </div>
+      </div>
+      <div class="deals-grid" id="dealsGrid"></div>
+    </div>
+  </section>
+
+  <section class="featured-section section" id="featured">
+    <div class="container">
+      <div class="section-header flex-between">
+        <div>
+          <h2>Featured Products</h2>
+          <p>Handpicked favorites just for you</p>
+        </div>
+        <div class="filter-tabs">
+          <button class="tab-btn active" data-filter="all">All</button>
+          <button class="tab-btn" data-filter="fashion">Fashion</button>
+          <button class="tab-btn" data-filter="electronics">Electronics</button>
+          <button class="tab-btn" data-filter="home">Home</button>
+        </div>
+      </div>
+      <div class="products-grid" id="productsGrid"></div>
+      <div class="view-all-wrap">
+        <a href="#" class="btn-outline">View All Products <i class="fa fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="promo-banner">
+    <div class="promo-split">
+      <div class="promo-card promo-dark" style="background-image:url('https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=800&q=80')">
+        <div class="promo-overlay"></div>
+        <div class="promo-content">
+          <span class="promo-eyebrow">Smartphones</span>
+          <h3>Innovation<br />Redefined</h3>
+          <p>Next-gen technology at your fingertips</p>
+          <a href="#" class="btn-ghost-sm">Shop Now →</a>
+        </div>
+      </div>
+      <div class="promo-card promo-light" style="background-image:url('https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&q=80')">
+        <div class="promo-overlay"></div>
+        <div class="promo-content">
+          <span class="promo-eyebrow">Earbuds</span>
+          <h3>Audio<br />Freedom</h3>
+          <p>Sound meets innovation</p>
+          <a href="#" class="btn-ghost-sm">Shop Now →</a>
+        </div>
+      </div>
+      <div class="promo-card promo-dark" style="background-image:url('https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800&q=80')">
+        <div class="promo-overlay"></div>
+        <div class="promo-content">
+          <span class="promo-eyebrow">Tablets</span>
+          <h3>Power of<br />Portability</h3>
+          <p>Performance on the go</p>
+          <a href="#" class="btn-ghost-sm">Shop Now →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="trending-section section" id="trending">
+    <div class="container">
+      <div class="section-header">
+        <h2>Trending Now</h2>
+        <p>What everyone's buying this week</p>
+      </div>
+      <div class="trending-grid" id="trendingGrid"></div>
+    </div>
+  </section>
+
+  <section class="reviews-section section">
+    <div class="container">
+      <div class="section-header">
+        <h2>What Our Customers Say</h2>
+        <p>Real reviews from real people</p>
+      </div>
+      <div class="reviews-track" id="reviewsTrack">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p>"The quality is absolutely incredible. Fast shipping and the packaging was so premium. Will definitely be ordering again!"</p>
+          <div class="reviewer"><div class="reviewer-avatar">JD</div><div><strong>Jane Doe</strong><small>Verified Buyer</small></div></div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p>"Best electronics store online. The headphones I bought are amazing – exactly as described. Customer service was top-notch."</p>
+          <div class="reviewer"><div class="reviewer-avatar">MK</div><div><strong>Mark K.</strong><small>Verified Buyer</small></div></div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★☆</div>
+          <p>"Beautiful furniture, easy to assemble, and looks exactly like in the photos. The free shipping was a bonus. Very happy!"</p>
+          <div class="reviewer"><div class="reviewer-avatar">SR</div><div><strong>Sarah R.</strong><small>Verified Buyer</small></div></div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p>"Ordered 3 items and all arrived perfect. The return policy gave me confidence to shop. Already recommended to my friends!"</p>
+          <div class="reviewer"><div class="reviewer-avatar">TL</div><div><strong>Tom L.</strong><small>Verified Buyer</small></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-inner">
+        <div class="newsletter-text">
+          <h2>Join Our Community</h2>
+          <p>Sign up for exclusive deals, early access to new products, and style inspiration delivered to your inbox.</p>
+        </div>
+        <div class="newsletter-form">
+          <div class="nl-input-wrap">
+            <input type="email" id="nlEmail" placeholder="Enter your email address" />
+            <button class="btn-primary" id="nlBtn">Subscribe</button>
+          </div>
+          <p class="nl-note" id="nlNote"></p>
+          <small>No spam, ever. Unsubscribe at any time.</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo footer-logo">
+            <div class="logo-icon">IP</div>
+            <span>IDYLLIC</span>
+          </a>
+          <p>Your premier destination for fashion, electronics, and home goods. Curated for quality, delivered with care.</p>
+          <div class="social-icons">
+            <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <a href="#">Fashion</a>
+          <a href="#">Electronics</a>
+          <a href="#">Home & Living</a>
+          <a href="#">All Products</a>
+          <a href="#">New Arrivals</a>
+          <a href="#">Sale</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="#">About Us</a>
+          <a href="#">Blog</a>
+          <a href="#">Contact</a>
+          <a href="#">Careers</a>
+          <a href="#">Press</a>
+          <a href="#">Affiliate</a>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <a href="#">Help Center</a>
+          <a href="#">Shipping Info</a>
+          <a href="#">Returns</a>
+          <a href="#">Track Order</a>
+          <a href="#">Size Guide</a>
+          <a href="#">FAQs</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 IDYLLIC Sales. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" title="Back to top">
+    <i class="fa fa-chevron-up"></i>
+  </button>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
