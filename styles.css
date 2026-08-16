@@ -1052,3 +1052,46 @@ ul { list-style: none; }
   .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
   .nl-input-wrap { flex-direction: column; }
 }
+/* ── Mobile Overflow Fix ─────────────────────── */
+@media (max-width: 768px) {
+  .navbar-inner {
+    gap: 8px; /* Reduce spacing between navbar items */
+  }
+  
+  .search-input {
+    width: 100px !important; /* Force smaller width */
+    padding: 6px 30px 6px 10px;
+  }
+  
+  .search-input:focus {
+    width: 120px !important;
+  }
+  
+  .nav-actions {
+    gap: 2px; /* Squeeze icons closer */
+  }
+  
+  .icon-btn, .dark-toggle {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+  
+  .badge {
+    width: 14px;
+    height: 14px;
+    font-size: 8px;
+    top: 0px;
+    right: 0px;
+  }
+  
+  .logo span {
+    font-size: 16px; /* Shrink brand name */
+  }
+  
+  .logo-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 10px;
+  }
+}
