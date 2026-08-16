@@ -1100,3 +1100,26 @@ body, html {
   max-width: 100vw;
   overflow-x: hidden;
 }
+/* ── Perfect Full-Width Edge Fix ────────────── */
+
+/* Force edge-to-edge width with no gaps */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Hide the vertical scrollbar on mobile but keep scrolling ability */
+body::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari, Edge */
+}
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Reset any default browser margins that might add gaps */
+body {
+  margin: 0;
+  padding: 0;
+}
